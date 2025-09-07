@@ -18,6 +18,8 @@ ENV LANG=ja_JP.UTF-8 \
     LC_ALL=ja_JP.UTF-8 \
     TZ=Asia/Tokyo
 
-USER ${USERNAME}
+COPY install.sh /home/devuser/install.sh
+RUN chown devuser:devuser /home/devuser/install.sh
 
+USER ${USERNAME}
 WORKDIR /home/${USERNAME}
