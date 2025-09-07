@@ -24,6 +24,7 @@ services:
     volumes:
       - /mnt/wslg:/mnt/wslg
       - /tmp/.X11-unix:/tmp/.X11-unix
+      - ${HOME}/.ssh:/home/devuser/.ssh:ro
     environment:
       - DISPLAY=:0
       - PULSE_SERVER=unix:/mnt/wslg/PulseServer
